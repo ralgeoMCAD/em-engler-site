@@ -1,0 +1,154 @@
+/*
+	Custom properties — change a color here and it updates everywhere
+	it's used below via var(--name).
+*/
+
+:root {
+	--color-bg: #100D0E;
+	--color-text: #FFFFFF;
+}
+
+
+/*
+	Resets — clear out some common browser defaults so styling
+	below has a consistent starting point.
+*/
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+html, body {
+	height: 100vh;
+}
+
+
+/* Base typography and page chrome — mobile first */
+
+body {
+	background-color: var(--color-bg);
+	color: var(--color-text);
+	font-family: Kranky;
+	font-size: 14px;
+	line-height: 1.5rem;
+	text-transform: uppercase;
+	width: 90%;
+	margin: 0 auto;
+}
+
+
+/* Header */
+
+header {
+	margin-top: 2rem;
+	margin-bottom: 4rem;
+	font-size: 1.25rem;
+}
+
+header nav ul {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+header nav ul li {
+	line-height: 1;
+	margin: .25rem 0;
+}
+
+
+/* Main / image gallery */
+
+main {
+	margin-bottom: 3rem;
+}
+
+main section h1 {
+	font-size: 3.5rem;
+	line-height: 1;
+	margin-bottom: 2rem;
+}
+
+.image-gallery {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 1rem;
+}
+
+.image-gallery img {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+
+/* Footer */
+
+footer {
+	padding-bottom: 1rem;
+}
+
+footer nav ul {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+
+/* Utility: shared link color and hover fade */
+
+.link--fader,
+.link--fader:link,
+.link--fader:active,
+.link--fader:visited {
+	text-decoration: none;
+	color: var(--color-text);
+}
+
+.link--fader:hover {
+	opacity: 0.5;
+}
+
+
+/* Responsive enhancements — mobile first, layered by min-width */
+
+/* Tablet-ish and up: two-column gallery, horizontal nav */
+@media screen and (min-width: 600px) {
+	header nav ul,
+	footer nav ul {
+		flex-direction: row;
+	}
+
+	header nav ul li,
+	footer nav ul li {
+		margin-left: 1rem;
+		margin-right: 1rem;
+	}
+
+	main section h1 {
+		text-align: center;
+	}
+
+	.image-gallery {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+/* Desktop-ish and up: three-column gallery, capped page width */
+@media screen and (min-width: 900px) {
+	body {
+		max-width: 960px;
+	}
+
+	.image-gallery {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+}
