@@ -89,6 +89,10 @@ main section h1 {
 	display: block;
 }
 
+.image-gallery--with-titles figcaption {
+	font-size: 1.25rem;
+}
+
 
 /* Footer */
 

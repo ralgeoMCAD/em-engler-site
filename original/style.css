@@ -1,0 +1,67 @@
+body {
+  margin:0;
+  padding:0;
+  background-color: #100D0E;
+  color: white;
+  font-family: Kranky;
+  text-align: center;
+}
+@media screen and (max-width:800px){
+  .pageimages{
+  display:grid;
+  grid-template-columns: repeat(auto-fit,minmax(100%,100%));
+  gap:1%;
+  width:100%;
+  justify-content: center;
+}
+}
+.pageimages{
+  display:grid;
+  grid-template-columns: repeat(auto-fit,minmax(5%, 30%));
+  gap:1%;
+  width:100%;
+  justify-content: center;
+}
+
+.pageimages img{
+  width:100%;
+  height:auto;
+}
+
+.index{
+  text-decoration:none;
+  color: white; font-size:30px; 
+}
+.index:hover{
+  opacity:.5;
+}
+.comics{
+  text-decoration:none;
+  color: white; font-size:30px;
+  
+}
+.comics:hover{
+  opacity:.5;
+}
+.projects{
+  text-decoration:none;
+  color: white; font-size:30px;
+}
+.projects:hover{
+  opacity:.5;
+}
+
+.instagram{
+  text-decoration:none;
+  color:white;
+}
+.instagram:hover{
+  opacity:.5;
+}
+.email{
+  text-decoration:none;
+  color:white;
+}
+.email:hover{
+  opacity:.5;
+}
